@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/charge_negative"
+    tools:context="tr.xip.rulebook.ui.activity.FullscreenRuleActivity">
+
+    <LinearLayout
+        android:id="@+id/ruleDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ruleDetailsId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha=".6"
+            android:textSize="16sp"
+            tools:text="#42" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_result_fullscreen"
+            tools:text="-3 ~ -10" />
+
+        <TextView
+            android:id="@+id/ruleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp"
+            android:paddingTop="32dp"
+            android:textSize="14sp"
+            tools:ignore="UnusedAttribute"
+            tools:text="Unošenje ili konzumiranje hrane/pića, uznemiravanje drugih učenika tokom etuta, neprimjereno sjedenje, pričanje, spavanje za vrijeme etuta i sl." />
+
+        <TextView
+            android:id="@+id/notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp"
+            tools:text="Ovo uključuje i novčanu nadoknadu štete, prema procjeni internatskog domara." />
+    </LinearLayout>
+</FrameLayout>

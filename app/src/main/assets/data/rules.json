@@ -1,0 +1,338 @@
+[
+  {
+    "id": 1,
+    "bosnian": "Kašnjenje na etut do 10 minuta",
+    "english": "Being late to a study hour within first 10 minutes",
+    "result": "-3",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 2,
+    "bosnian": "Kašnjenje na etut preko 10 minuta, ili nedolazak na etut bez dozvole",
+    "english": "Being late to a study hour for more than 10 minutes, or not attending a study hour without permission",
+    "result": "-6",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 3,
+    "bosnian": "Unošenje ili konzumiranje hrane/pića, uznemiravanje drugih učenika tokom etuta, neprimjereno sjedenje, pričanje, spavanje za vrijeme etuta i sl.",
+    "english": "Bringing or consuming food/drinks, disturbing other students during a study hour, innapropriate sitting, talking, sleeping during a study hour, etc.",
+    "result": "-3",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 4,
+    "bosnian": "Korištenje mobilnog telefona, tableta, laptopa, uređaja za slušanje muzike i sl. za vrijeme etuta",
+    "english": "Using mobile phones, tablets, laptops, music devices, etc. during a study hour",
+    "result": "-5",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 5,
+    "bosnian": "Dolazak na etut u prekratkoj odjeći (šorc, potkošulja i sl.)",
+    "english": "Attending a study hour in overly short clothes (shorts, undershirt etc.)",
+    "result": "-3",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 6,
+    "bosnian": "Samovoljno napuštanje etuta prije njegovog kraja",
+    "english": "Willingly leaving a study hour before it ends",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 7,
+    "bosnian": "Korištenje laptopa bez dozvole za vrijeme etute ili nakon 23:00 h",
+    "english": "Using laptops without permission during a study hour, or after 23:00 h",
+    "result": "-5",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 8,
+    "bosnian": "Paljenje svjetala u sobi ili na hodniku, pravljenje buke, ometanje drugih, te korištenje lampe ili napuštanje sobe bez dozvole u vremenu nakon 23:00 h",
+    "english": "Turning on room or corridor lights, making noise, disturbing others, using lamps, or leaving room without permission after 23:00 h",
+    "result": "-3",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 9,
+    "bosnian": "Uznemiravanje ili vrijeđanje drugih učenika na bilo koji način",
+    "english": "Disturbing or insulting other students in any particular way",
+    "result": "-3 ~ -10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 10,
+    "bosnian": "Poticanje rasprave vjerskim, nacionalnim, političkim ili drugim osjetljivim temama",
+    "english": "Encouraging discussion of religion, nation, politics, and other sensitive topics",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 11,
+    "bosnian": "Nespremljen krevet",
+    "english": "Untidy bed",
+    "result": "-3",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 12,
+    "bosnian": "Napuštanje internata i/ili kampusa bez dozvole",
+    "english": "Leaving the dormitory and/or campus without permission",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 13,
+    "bosnian": "Kašnjenje u internat",
+    "english": "Arriving late to the dormitory",
+    "result": "-5 ~ -10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 14,
+    "bosnian": "Noćenje ili duži boravak van internata bez dozvole i najave osoblju, ili uz zakašnjelu najavu odsustva osoblju",
+    "english": "Staying overnight or for a longer period of time in a place other than the dormitory, without permission and notification of the staff, or failing to notify the staff on time",
+    "result": "-15",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 15,
+    "bosnian": "Boravak u internatu za vrijeme vikenda ili praznika bez prethodne najave",
+    "english": "Staying in the dormitory during weekends and holidays without informing the staff beforehand",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 16,
+    "bosnian": "Dovođenje u internat osoba koje inače ne borave u internatu bez dozvole, koju treba uzeti barem dan ranije iz škole",
+    "english": "Bringing to the dormitory any person that normally does not stay in the dormitory, without permission obtained from the school at least a day ahead",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 17,
+    "bosnian": "Korištenje pokućstva internata (usisivač, kuhalo, posuđe i sl.) bez dozvole",
+    "english": "Using dormitory houseware (vacuum cleaner, teakettle, dishes, etc.) without permission",
+    "result": "-5",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 18,
+    "bosnian": "Ulazak u sobe vaspitača ili ured direktora internata bez dozvole",
+    "english": "Entering the rooms of dormitory educators or the principal’s office without permission",
+    "result": "-5",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 19,
+    "bosnian": "Boravak na spratovima ili u prostorijama internata koji inače nisu predviđeni za boravak učenika bez dozvole",
+    "english": "Spending time on floors or in rooms that are normally not meant for students without permission",
+    "result": "-5",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 20,
+    "bosnian": "Hodanje internatom u obući, toaletnim papučama i sl.",
+    "english": "Walking around the dormitory in shoes, toilet slippers, etc.",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 21,
+    "bosnian": "Odlaganje obuće van ormarića i ostavljanje otvorenih vrata ormarića",
+    "english": "Leaving shoes out of the shoe cabinet or leaving the shoe cabinet doors open",
+    "result": "-3",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 22,
+    "bosnian": "Korištenje muzičkih instrumenata, zvučnika i preglasno puštanje bilo kakvih zvukova bez dozvole",
+    "english": "Using musical instruments or speakers, or simply playing any sounds out loud without permission",
+    "result": "-5",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 23,
+    "bosnian": "Korištenje tuđih stvari bez dozvole",
+    "english": "Using or displacing other students’ property without permission",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 24,
+    "bosnian": "Neprimjereno odijevanje (donji veš, bokserice, bez potkošulje i sl.)",
+    "english": "Inappropriate clothing (underwear, boxers, no undershirt, etc.)",
+    "result": "-5",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 25,
+    "bosnian": "Izbacivanje opasnih predmeta, otpadaka i sl. kroz prozor",
+    "english": "Throwing dangerous objects, garbage, etc. through the window",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 26,
+    "bosnian": "Nanošenje štete pokućstvu i imovini internata",
+    "english": "Damaging dormitory houseware and property",
+    "result": "-10",
+    "note_bosnian": "Ovo uključuje i novčanu nadoknadu štete, prema procjeni internatskog domara.",
+    "note_english": "This also involves financial compensation for the damage, according to the evaluation of the dormitory janitor."
+  },
+  {
+    "id": 27,
+    "bosnian": "Namjerno i bezrazložno aktiviranje protupožarnog alarma",
+    "english": "Activating fire alarm on purpose and without reason",
+    "result": "-15",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 28,
+    "bosnian": "Posjedovanje i korištenje neprimjerenih časopisa, DVD-ova i sl. materijala",
+    "english": "Possession and usage of inappropriate magazines, DVD-s, and similar materials",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 29,
+    "bosnian": "Konzumiranje cigareta u internatu ili dvorištu internata",
+    "english": "Consuming cigarettes in the dormitory building or dormitory courtyard",
+    "result": "-20",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 30,
+    "bosnian": "Tuča",
+    "english": "Fighting",
+    "result": "-15",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 31,
+    "bosnian": "Biti učenik sobe koja ima preniske bodove iz urednosti, prema procjeni vaspitača koji ocjenjuju urednost",
+    "english": "Being a student in a room with too low cleanness points, according to the regular evaluations of the educators",
+    "result": "-3 ~ -10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 32,
+    "bosnian": "Ismijavanje pravilnika internata i bodovne liste, kao i poticanje drugih učenika na nepoštivanje istih",
+    "english": "Making fun of dormitory rules and list of points, as well as encouraging other students to do the same",
+    "result": "-10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 33,
+    "bosnian": "Nepoštivanje osoblja internata",
+    "english": "Being disrespectful to the dormitory staff",
+    "result": "-10",
+    "note_bosnian": "Ovo uključuje i određene motivacione nagrade i poklone.",
+    "note_english": "Dormitory and school administration, along with the school discipline committee, will decide on sanctions, behavior mark decreases, or eventual expulsion of the student from the dormitory."
+  },
+  {
+    "id": 34,
+    "bosnian": "Unošenje i posjedovanje stranih i štetnih predmeta (cigarete, alkohol, noževi i sl.). Ovo se odnosi i na predmete slične navedenima, poput elektronskih cigareta, bezalkoholnog piva, džepnih nožića, igraćih karata, drugih štetnih igara i sl.",
+    "english": "Bringing and posessing any foreign and harmful objects (cigarettes, alcohol, knives, etc.). This also applies to objects similar to the aforementioned ones, such as electronic cigarettes, non-alcoholic beer, pocket knives, playing cards, other harmful games, etc.",
+    "result": "500",
+    "note_bosnian": "Ovo uključuje i određene motivacione nagrade i poklone.",
+    "note_english": "Dormitory and school administration, along with the school discipline committee, will decide on sanctions, behavior mark decreases, or eventual expulsion of the student from the dormitory."
+  },
+  {
+    "id": 35,
+    "bosnian": "Krađa",
+    "english": "Stealing",
+    "result": "500",
+    "note_bosnian": "Ovo uključuje i određene motivacione nagrade i poklone.",
+    "note_english": "Dormitory and school administration, along with the school discipline committee, will decide on sanctions, behavior mark decreases, or eventual expulsion of the student from the dormitory."
+  },
+  {
+    "id": 36,
+    "bosnian": "Konzumiranje alkohola i/ili drugih opojnih sredstava u internatu ili dvorištu internata",
+    "english": "Consuming alcohol and/or other opioids in the dormitory or the dormitory courtyard",
+    "result": "404",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 37,
+    "bosnian": "Bilo kakav drugi postupak ili ponašanje za koje vaspitači i uprava procijene da su neprimjereni i štete disciplini, redu i miru u internatu",
+    "english": "Any other action or behaviour that dormitory educators or administration deem(s) inappropriate and harmful to the discipline, order, and harmony of the dormitory",
+    "result": "-3 ~ -10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 38,
+    "bosnian": "Biti od pomoći upravi ili osoblju internata",
+    "english": "Being helpful to the dormitory administration or staff",
+    "result": "+3 ~ +10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 39,
+    "bosnian": "Biti primjer drugim učenicima u ponašanju",
+    "english": "Being a good example to other students",
+    "result": "+3 ~ +10",
+    "note_bosnian": "",
+    "note_english": ""
+  },
+  {
+    "id": 40,
+    "bosnian": "Biti učenik jedne od soba koje su nagrađene za urednost",
+    "english": "Being a student from a room that is awarded for cleanness",
+    "result": "+3 ~ +10",
+    "note_bosnian": "Ovo uključuje i određene motivacione nagrade i poklone.",
+    "note_english": "This also involves certain motivational rewards and gifts."
+  },
+  {
+    "id": 41,
+    "bosnian": "Biti odabran za najboljeg učenika mjeseca",
+    "english": "Being selected as the student of the month",
+    "result": "+3 ~ +10",
+    "note_bosnian": "Ovo uključuje i određene motivacione nagrade i poklone.",
+    "note_english": "This also involves certain motivational rewards and gifts."
+  },
+  {
+    "id": 42,
+    "bosnian": "Učešće u raznim internatskim aktivnostima i ostvarivanje zapaženih rezultata na istima",
+    "english": "Participating and performing well on various dormitory activities",
+    "result": "+3 ~ +10",
+    "note_bosnian": "Ovo uključuje i određene motivacione nagrade i poklone.",
+    "note_english": "This also involves certain motivational rewards and gifts."
+  }
+]
