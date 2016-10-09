@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">Rulebook</string>
 
+    <string name="action_about">About</string>
+    <string name="action_change_lang">Change language</string>
+    <string name="action_ok">OK</string>
+
     <string name="hint_search">Search</string>
 
     <string name="discipline">Discipline</string>
     <string name="expulsion">Expulsion</string>
 
-    <string name="title_activity_fullscreen_rule">FullscreenRuleActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_contact_developer">Contact developer</string>
+    <string name="title_open_source_licenses">Open source licenses</string>
+    <string name="title_source_code">Source code</string>
+
+    <string name="disclaimer">This application is in no way directly affiliated with, or officially developed by, the Sarajevo College or the Bosna Sema Educational Institutions.</string>
 </resources>

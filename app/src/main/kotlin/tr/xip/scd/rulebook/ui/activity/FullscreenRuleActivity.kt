@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_fullscreen_rule.*
 import tr.xip.scd.rulebook.R
+import tr.xip.scd.rulebook.data.DataManager
 import tr.xip.scd.rulebook.model.Rule
-import tr.xip.scd.rulebook.util.getLanguage
 
 class FullscreenRuleActivity : AppCompatActivity() {
 
@@ -55,8 +55,9 @@ class FullscreenRuleActivity : AppCompatActivity() {
                     }
             )
 
-            val lang = getLanguage(this)
-            ruleView.text = if (lang == "ba" || lang == "bs" || lang == "hr" || lang == "sr") rule.bosnian else rule.english
+            val lang = DataManager.getLang()
+
+            ruleView.text = if (lang == DataManager.LANG_EN) rule.english else rule.bosnian
 
             when (rule.result) {
                 "404" -> result.text = "Expulsion"
@@ -64,10 +65,10 @@ class FullscreenRuleActivity : AppCompatActivity() {
                 else -> result.text = rule.result
             }
 
-            if (getLanguage(this) == "en" && rule.note_english.trim().length != 0) {
+            if (lang == DataManager.LANG_EN && rule.note_english.trim().length != 0) {
                 notes.text = rule.note_english
                 notes.visibility = View.VISIBLE
-            } else if (getLanguage(this) == "ba" && rule.note_bosnian.trim().length != 0) {
+            } else if (lang == DataManager.LANG_BS && rule.note_bosnian.trim().length != 0) {
                 notes.text = rule.note_bosnian
                 notes.visibility = View.VISIBLE
             } else {

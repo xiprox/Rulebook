@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item_rule.view.*
 import tr.xip.scd.rulebook.R
+import tr.xip.scd.rulebook.data.DataManager
 import tr.xip.scd.rulebook.model.Rule
-import tr.xip.scd.rulebook.util.getLanguage
 
 class RulesAdapter(val recycler: RecyclerView, val dataset: List<Rule>, val clickListener: OnItemClickListener?) : RecyclerView.Adapter<RulesAdapter.ViewHolder>() {
 
@@ -34,8 +34,7 @@ class RulesAdapter(val recycler: RecyclerView, val dataset: List<Rule>, val clic
                 }
         )
 
-        val lang = getLanguage(context)
-        holder.view.rule.text = if (lang == "ba" || lang == "bs" || lang == "hr" || lang == "sr") item.bosnian else item.english
+        holder.view.rule.text = if (DataManager.getLang() == DataManager.LANG_EN) item.english else item.bosnian
     }
 
     override fun getItemCount(): Int = dataset.size

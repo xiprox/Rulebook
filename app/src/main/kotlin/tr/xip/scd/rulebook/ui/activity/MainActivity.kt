@@ -6,15 +6,23 @@ import android.support.design.widget.BottomSheetBehavior
 import android.support.v4.widget.NestedScrollView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.PopupMenu
 import android.support.v7.widget.RecyclerView
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import nl.komponents.kovenant.CancelablePromise
+import nl.komponents.kovenant.android.startKovenant
+import nl.komponents.kovenant.android.stopKovenant
+import nl.komponents.kovenant.task
+import nl.komponents.kovenant.ui.successUi
 import tr.xip.scd.rulebook.R
 import tr.xip.scd.rulebook.data.DataManager
 import tr.xip.scd.rulebook.ext.toDp
 import tr.xip.scd.rulebook.model.Rule
 import tr.xip.scd.rulebook.ui.adapter.RulesAdapter
-import tr.xip.scd.rulebook.util.getLanguage
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private var bottomSheetBehavior: BottomSheetBehavior<NestedScrollView>? = null
@@ -24,18 +32,50 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        startKovenant()
+
+        val rules = DataManager.getData(this)
 
         bottomSheetBehavior = BottomSheetBehavior.from(ruleDetails)
         bottomSheetBehavior?.state = BottomSheetBehavior.STATE_HIDDEN
 
-        recycler.layoutManager = LinearLayoutManager(this)
-        recycler.adapter = RulesAdapter(recycler, DataManager.getData(this), object : RulesAdapter.OnItemClickListener {
+        more.setOnClickListener {
+            val menu = PopupMenu(this, more)
+            menu.inflate(R.menu.main)
+            menu.setOnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.action_change_lang -> {
+                        // Collapse BottomSheet
+                        bottomSheetBehavior?.state = BottomSheetBehavior.STATE_HIDDEN
+
+                        // Save preferences
+                        if (DataManager.getLang() == DataManager.LANG_EN) {
+                            DataManager.saveLang(DataManager.LANG_BS)
+                        } else {
+                            DataManager.saveLang(DataManager.LANG_EN)
+                        }
+
+                        // Reload content
+                        recycler.adapter.notifyDataSetChanged()
+                    }
+                    R.id.action_about -> {
+                        startActivity(Intent(this@MainActivity, AboutActivity::class.java))
+                    }
+                }
+                true
+            }
+            menu.show()
+        }
+
+        val recyclerClickListener = object : RulesAdapter.OnItemClickListener {
             override fun onClick(rule: Rule) {
                 loadDataIntoRuleDetails(rule)
                 bottomSheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
             }
-        })
+        }
 
+        recycler.layoutManager = LinearLayoutManager(this)
+        recycler.adapter = RulesAdapter(recycler, rules, recyclerClickListener)
         recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             var offset = 0
             override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
@@ -62,6 +102,41 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
+        var searchPromise = task {}
+
+        search.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                val foundRules = ArrayList<Rule>()
+
+                progress.visibility = View.VISIBLE
+
+                (searchPromise as CancelablePromise).cancel(Exception("trash"))
+                searchPromise = task {
+                    for (rule in rules) {
+                        if (rule.bosnian.contains(s.toString()) || rule.english.contains(s.toString())) {
+                            foundRules.add(rule)
+                        }
+                    }
+                } successUi {
+                    recycler.swapAdapter(RulesAdapter(recycler, foundRules, recyclerClickListener), false)
+                    progress.visibility = View.GONE
+                }
+            }
+        })
+    }
+
+    override fun onStop() {
+        super.onStop()
+        stopKovenant()
     }
 
     override fun onBackPressed() {
@@ -92,9 +167,9 @@ class MainActivity : AppCompatActivity() {
                     resources.getColor(R.color.charge_negative_dark, null)
                 }
         )
+        val lang = DataManager.getLang()
 
-        val lang = getLanguage(this)
-        ruleView.text = if (lang == "ba" || lang == "bs" || lang == "hr" || lang == "sr") rule.bosnian else rule.english
+        ruleView.text = if (lang == DataManager.LANG_EN) rule.english else rule.bosnian
 
         when (rule.result) {
             "404" -> result.text = "Expulsion"
@@ -102,10 +177,10 @@ class MainActivity : AppCompatActivity() {
             else -> result.text = rule.result
         }
 
-        if (getLanguage(this) == "en" && rule.note_english.trim().length != 0) {
+        if (lang == DataManager.LANG_EN && rule.note_english.trim().length != 0) {
             notes.text = rule.note_english
             notes.visibility = View.VISIBLE
-        } else if (getLanguage(this) == "ba" && rule.note_bosnian.trim().length != 0) {
+        } else if (lang == DataManager.LANG_BS && rule.note_bosnian.trim().length != 0) {
             notes.text = rule.note_bosnian
             notes.visibility = View.VISIBLE
         } else {
