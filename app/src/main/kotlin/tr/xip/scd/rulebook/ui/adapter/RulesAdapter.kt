@@ -28,9 +28,9 @@ class RulesAdapter(val recycler: RecyclerView, val dataset: List<Rule>, val clic
         holder.view.ruleId.text = "${item.id}"
         holder.view.charge.setBackgroundColor(
                 if (item.result.contains("+")) {
-                    context.resources.getColor(R.color.charge_positive, null)
+                    context.resources.getColor(R.color.charge_positive)
                 } else {
-                    context.resources.getColor(R.color.charge_negative, null)
+                    context.resources.getColor(R.color.charge_negative)
                 }
         )
 
