@@ -8,7 +8,7 @@ This application is in no way directly affiliated with, or officially developed 
 <a href='https://play.google.com/store/apps/details?id=tr.xip.scd.kisokusho&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img height="62" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 ## License
 ```
-Copyright (C) 2016  İhsan Işık
+Copyright (C) 2017  İhsan Işık
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
