@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 } successUi {
-                    recycler.swapAdapter(RulesAdapter(recycler, foundRules, recyclerClickListener), false)
+                    recycler.adapter = RulesAdapter(recycler, foundRules, recyclerClickListener)
                     progress.visibility = View.GONE
                 }
             }
