@@ -50,7 +50,6 @@
                         android:imeOptions="flagNoFullscreen|actionSearch"
                         android:inputType="textFilter"
                         android:padding="12dp"
-                        android:text="asdasdaskjdaskjdjkahjkdhjakshkdjhaskjdhjkasdkahs"
                         android:textColor="?android:textColorSecondary"
                         android:textSize="14sp"
                         tools:ignore="RtlHardcoded" />
